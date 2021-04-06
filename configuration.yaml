@@ -1,7 +1,7 @@
 jenkins:
   agentProtocols:
-   - "JNLP4-connect"
-   - "Ping"
+  - "JNLP4-connect"
+  - "Ping"
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
@@ -17,7 +17,6 @@ jenkins:
   numExecutors: 2
   primaryView:
     all:
-      description: "Hello! Welcome to my Jenkins instance :)"
       name: "all"
   projectNamingStrategy: "standard"
   quietPeriod: 5
@@ -38,8 +37,8 @@ jenkins:
         - "mailer"
         - preferredProvider:
             providerId: "default"
-      - id: "jigglypuff"
-        name: "Jigglypuff"
+      - id: "will"
+        name: "will"
         properties:
         - "apiToken"
         - "myView"
@@ -47,7 +46,7 @@ jenkins:
             providerId: "default"
         - "timezone"
         - mailer:
-            emailAddress: "Jigglypuff@gmail.com"
+            emailAddress: "will@gmail.Com"
   slaveAgentPort: 50000
   updateCenter:
     sites:
@@ -55,7 +54,6 @@ jenkins:
       url: "https://updates.jenkins.io/update-center.json"
   views:
   - all:
-      description: "Hello! Welcome to my Jenkins instance :)"
       name: "all"
   viewsTabBar: "standard"
 security:
@@ -63,12 +61,14 @@ security:
     creationOfLegacyTokenEnabled: false
     tokenGenerationOnCreationEnabled: false
     usageStatisticsEnabled: true
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: true
   sSHD:
     port: -1
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
-     - "jobBuildDiscarder"
+    - "jobBuildDiscarder"
   buildStepOperation:
     enabled: false
   email-ext:
@@ -82,7 +82,7 @@ unclassified:
       Check console output at $BUILD_URL to view the results.
     defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
     defaultTriggerIds:
-     - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
+    - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
     maxAttachmentSize: -1
     maxAttachmentSizeMb: -1
     precedenceBulk: false
@@ -125,5 +125,3 @@ tool:
   mavenGlobalConfig:
     globalSettingsProvider: "standard"
     settingsProvider: "standard"
-jobs: 
- - file: job_dsl.groovy 
