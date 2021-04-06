@@ -1,7 +1,7 @@
 jenkins:
   agentProtocols:
-  - "JNLP4-connect"
-  - "Ping"
+   - "JNLP4-connect"
+   - "Ping"
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
@@ -10,7 +10,7 @@ jenkins:
       excludeClientIPFromCrumb: false
   disableRememberMe: false
   labelAtoms:
-  - name: "master"
+   - name: "master"
   markupFormatter: "plainText"
   mode: NORMAL
   myViewsTabBar: "standard"
@@ -28,7 +28,7 @@ jenkins:
       allowsSignup: false
       enableCaptcha: false
       users:
-      - id: "admin"
+       - id: "admin"
         name: "admin"
         properties:
         - "apiToken"
@@ -37,7 +37,7 @@ jenkins:
         - "mailer"
         - preferredProvider:
             providerId: "default"
-      - id: "will"
+       - id: "will"
         name: "will"
         properties:
         - "apiToken"
@@ -50,10 +50,10 @@ jenkins:
   slaveAgentPort: 50000
   updateCenter:
     sites:
-    - id: "default"
+     - id: "default"
       url: "https://updates.jenkins.io/update-center.json"
   views:
-  - all:
+   - all:
       name: "all"
   viewsTabBar: "standard"
 security:
@@ -118,9 +118,9 @@ unclassified:
     elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
     systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
 tool:
-  git:
+  git:https://github.com/william-off/mymarvin-test/blob/master/configuration.yaml
     installations:
-    - home: "git"
+     - home: "git"
       name: "Default"
   mavenGlobalConfig:
     globalSettingsProvider: "standard"
