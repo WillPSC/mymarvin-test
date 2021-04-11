@@ -32,7 +32,7 @@ jenkins:
               - "Overall/Administer"
               - "Overall/Read"
             assignments: 
-              - "Hugo"
+              - "chocolateen"
           - name: "ape"
             description: "Pedagogical team member"
             permissions:
@@ -58,9 +58,8 @@ jenkins:
               - "Job/Read"
               - "Job/Workspace"
             assignments:
-              - "Nassim"
-
-
-unclassified:
-  location:
-    url: http://localhost:8080/
+              - "Nassim"      
+  
+  
+jobs:
+ - file: var/jenkins_home/job_dsl.groovy
